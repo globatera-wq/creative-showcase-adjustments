@@ -228,6 +228,12 @@ function Index() {
 
         {/* SOBRE */}
         <section className="section" id="sobre">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>01</b> — Sobre</span>
+              <span>Gabi Oliveira</span>
+            </div>
+          </div>
           <div className="wrap about">
             <div className="about-media reveal">
               <div className="frame">
@@ -271,6 +277,12 @@ function Index() {
         {/* ATUAÇÃO */}
         <section className="section" id="atuacao">
           <div className="wrap">
+            <div className="sec-index">
+              <span><b>02</b> — Atuação</span>
+              <span>Seis frentes de trabalho</span>
+            </div>
+          </div>
+          <div className="wrap">
             <div className="areas-head reveal">
               <div>
                 <div className="eyebrow">O que eu faço</div>
@@ -295,6 +307,12 @@ function Index() {
 
         {/* BASTIDORES */}
         <section className="section" id="bastidores">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>03</b> — Bastidores</span>
+              <span>Registros de produção</span>
+            </div>
+          </div>
           <div className="wrap">
             <div className="areas-head reveal">
               <div>
@@ -331,6 +349,12 @@ function Index() {
 
         {/* PROJETOS */}
         <section className="section" id="projetos">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>04</b> — Projetos</span>
+              <span>Captação · Edição · Cor</span>
+            </div>
+          </div>
           <div className="wrap">
             <div className="areas-head reveal">
               <div>
@@ -379,6 +403,12 @@ function Index() {
         {/* PROCESSO */}
         <section className="section tight panel" id="processo">
           <div className="wrap">
+            <div className="sec-index">
+              <span><b>05</b> — Processo</span>
+              <span>Seis etapas</span>
+            </div>
+          </div>
+          <div className="wrap">
             <div className="reveal" style={{ marginBottom: 50 }}>
               <div className="eyebrow">Como trabalho</div>
               <h2 className="section-title">Workflow</h2>
@@ -397,6 +427,12 @@ function Index() {
 
         {/* SKILLS */}
         <section className="section">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>06</b> — Habilidades</span>
+              <span>Competências · Softwares</span>
+            </div>
+          </div>
           <div className="wrap split-2">
             <div className="reveal">
               <div className="eyebrow">Habilidades</div>
@@ -433,6 +469,12 @@ function Index() {
 
         {/* FORMAÇÃO */}
         <section className="section tight panel">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>07</b> — Formação</span>
+              <span>Educação · Idiomas</span>
+            </div>
+          </div>
           <div className="wrap split-2">
             <div className="reveal">
               <div className="eyebrow">Formação</div>
@@ -481,6 +523,12 @@ function Index() {
 
         {/* CTA */}
         <section className="section cta-final panel" id="contato">
+          <div className="wrap">
+            <div className="sec-index">
+              <span><b>08</b> — Contato</span>
+              <span>Disponível para novos projetos</span>
+            </div>
+          </div>
           <div className="wrap">
             <div className="eyebrow" style={{ justifyContent: "center" }}>
               Vamos conversar
