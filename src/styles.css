@@ -26,25 +26,26 @@
   --color-primary: var(--red);
   --color-primary-foreground: var(--white);
   --color-accent: var(--red-bright);
-  --font-display: "Anton", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-sans: "Inter Tight", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
   --radius: 0px;
-  --black: oklch(0.15 0 0);
-  --background: oklch(0.15 0 0);
-  --surface: oklch(0.21 0 0);
-  --surface-2: oklch(0.24 0.004 90);
-  --line: oklch(0.3 0 0);
-  --cream: oklch(0.95 0.019 78);
-  --foreground: oklch(0.95 0.019 78);
-  --muted: oklch(0.7 0.019 78);
-  --muted-2: oklch(0.52 0.017 78);
-  --red: oklch(0.33 0.11 20);
-  --red-bright: oklch(0.44 0.16 22);
-  --white: oklch(1 0 0);
-  --ease: cubic-bezier(0.16, 0.84, 0.32, 1);
+  --black: oklch(0.155 0.004 60);
+  --background: oklch(0.155 0.004 60);
+  --surface: oklch(0.196 0.005 60);
+  --surface-2: oklch(0.23 0.006 65);
+  --line: oklch(0.29 0.006 65);
+  --cream: oklch(0.945 0.014 85);
+  --foreground: oklch(0.945 0.014 85);
+  --muted: oklch(0.72 0.012 85);
+  --muted-2: oklch(0.55 0.011 85);
+  --red: oklch(0.44 0.085 45);
+  --red-bright: oklch(0.76 0.115 68);
+  --white: oklch(0.985 0.008 85);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
