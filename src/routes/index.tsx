@@ -338,25 +338,32 @@ function Index() {
             </div>
 
             <div className="block-label reveal">
-              <h3>Série 1.85</h3>
-              <p>Quadros em proporção cinematográfica 1.85:1 — quatro por fileira.</p>
+              <h3>Gabriela Gusmão</h3>
+              <p>Captação de câmera e edição de vídeo · projeto realizado por Gabi Oliveira.</p>
             </div>
-            <div className="film-row reveal">
-              {serie185.slice(0, 4).map((f) => (
-                <div className="film-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+            <div className="proj-mosaic reveal">
+              <div className="pm-copy">
+                <div className="pm-kicker">
+                  <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
+                  </svg>
+                  <h3>Gabriela Gusmão</h3>
+                </div>
+                <h4>Captação & Edição</h4>
+                <ul>
+                  <li>Captação de câmera</li>
+                  <li>Edição de vídeo</li>
+                  <li>Correção de cor e finalização</li>
+                </ul>
+              </div>
+              {gusmao.map((f) => (
+                <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
                   <div className="g-cap">{f.cap}</div>
                 </div>
               ))}
             </div>
-            <div className="film-row reveal" style={{ marginTop: 16 }}>
-              {serie185.slice(4, 8).map((f) => (
-                <div className="film-item" key={f.cap} onClick={() => setLightbox(f.src)}>
-                  <img src={f.src} alt={f.cap} loading="lazy" />
-                  <div className="g-cap">{f.cap}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </section>
 
