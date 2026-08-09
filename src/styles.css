@@ -1678,3 +1678,25 @@
     }
   }
 }
+
+@layer components {
+  /* the numbered index already labels the section — drop the duplicate eyebrow */
+  .areas-head .eyebrow {
+    display: none;
+  }
+  .areas-head {
+    margin-bottom: 46px;
+  }
+  .hero-tag {
+    max-width: none;
+    white-space: nowrap;
+  }
+  .cta-final .lede {
+    margin-inline: 0;
+  }
+  @media (max-width: 640px) {
+    .hero-tag {
+      white-space: normal;
+    }
+  }
+}
