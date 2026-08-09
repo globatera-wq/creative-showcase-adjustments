@@ -175,6 +175,8 @@ function Index() {
 
   return (
     <>
+      <div className="grain" aria-hidden="true" />
+      <div className="vignette" aria-hidden="true" />
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
         <a href="#top" className="logo">
           Gabi Oliveira
@@ -210,6 +212,11 @@ function Index() {
                 <a href="#contato" className="btn btn-ghost">
                   Entrar em Contato
                 </a>
+              </div>
+              <div className="hero-meta">
+                <span>São Paulo · Brasil</span>
+                <span>Captação · Edição · Cor</span>
+                <span>Desde 2015</span>
               </div>
             </div>
           </div>
