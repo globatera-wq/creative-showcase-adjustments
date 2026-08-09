@@ -70,7 +70,7 @@ const videos = [
   { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
 ];
 
-const machado: { src: string; cap: string }[] = [
+const gusmao: { src: string; cap: string }[] = [
   { src: img00.url, cap: "Quadro 01" },
   { src: img05.url, cap: "Quadro 02" },
   { src: img06.url, cap: "Quadro 03" },
@@ -175,8 +175,6 @@ function Index() {
 
   return (
     <>
-      <div className="grain" aria-hidden="true" />
-      <div className="vignette" aria-hidden="true" />
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
         <a href="#top" className="logo">
           Gabi Oliveira
@@ -213,11 +211,6 @@ function Index() {
                   Entrar em Contato
                 </a>
               </div>
-              <div className="hero-meta">
-                <span>São Paulo · Brasil</span>
-                <span>Captação · Edição · Cor</span>
-                <span>Desde 2015</span>
-              </div>
             </div>
           </div>
           <div className="scroll-cue">
@@ -228,12 +221,6 @@ function Index() {
 
         {/* SOBRE */}
         <section className="section" id="sobre">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>01</b> — Sobre</span>
-              <span>Gabi Oliveira</span>
-            </div>
-          </div>
           <div className="wrap about">
             <div className="about-media reveal">
               <div className="frame">
@@ -277,12 +264,6 @@ function Index() {
         {/* ATUAÇÃO */}
         <section className="section" id="atuacao">
           <div className="wrap">
-            <div className="sec-index">
-              <span><b>02</b> — Atuação</span>
-              <span>Seis frentes de trabalho</span>
-            </div>
-          </div>
-          <div className="wrap">
             <div className="areas-head reveal">
               <div>
                 <div className="eyebrow">O que eu faço</div>
@@ -307,12 +288,6 @@ function Index() {
 
         {/* BASTIDORES */}
         <section className="section" id="bastidores">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>03</b> — Bastidores</span>
-              <span>Registros de produção</span>
-            </div>
-          </div>
           <div className="wrap">
             <div className="areas-head reveal">
               <div>
@@ -350,12 +325,6 @@ function Index() {
         {/* PROJETOS */}
         <section className="section" id="projetos">
           <div className="wrap">
-            <div className="sec-index">
-              <span><b>04</b> — Projetos</span>
-              <span>Captação · Edição · Cor</span>
-            </div>
-          </div>
-          <div className="wrap">
             <div className="areas-head reveal">
               <div>
                 <div className="eyebrow">Portfólio</div>
@@ -371,7 +340,7 @@ function Index() {
             </div>
 
             <div className="block-label reveal">
-              <h3>Gabriela Machado</h3>
+              <h3>Gabriela Gusmão</h3>
               <p>Captação de câmera e edição de vídeo · projeto realizado por Gabi Oliveira.</p>
             </div>
             <div className="proj-mosaic reveal">
@@ -380,7 +349,7 @@ function Index() {
                   <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
                   </svg>
-                  <h3>Gabriela Machado</h3>
+                  <h3>Gabriela Gusmão</h3>
                 </div>
                 <h4>Captação & Edição</h4>
                 <ul>
@@ -389,7 +358,7 @@ function Index() {
                   <li>Correção de cor e finalização</li>
                 </ul>
               </div>
-              {machado.map((f) => (
+              {gusmao.map((f) => (
                 <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
                   <div className="g-cap">{f.cap}</div>
@@ -402,12 +371,6 @@ function Index() {
 
         {/* PROCESSO */}
         <section className="section tight panel" id="processo">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>05</b> — Processo</span>
-              <span>Seis etapas</span>
-            </div>
-          </div>
           <div className="wrap">
             <div className="reveal" style={{ marginBottom: 50 }}>
               <div className="eyebrow">Como trabalho</div>
@@ -427,12 +390,6 @@ function Index() {
 
         {/* SKILLS */}
         <section className="section">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>06</b> — Habilidades</span>
-              <span>Competências · Softwares</span>
-            </div>
-          </div>
           <div className="wrap split-2">
             <div className="reveal">
               <div className="eyebrow">Habilidades</div>
@@ -469,12 +426,6 @@ function Index() {
 
         {/* FORMAÇÃO */}
         <section className="section tight panel">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>07</b> — Formação</span>
-              <span>Educação · Idiomas</span>
-            </div>
-          </div>
           <div className="wrap split-2">
             <div className="reveal">
               <div className="eyebrow">Formação</div>
@@ -523,12 +474,6 @@ function Index() {
 
         {/* CTA */}
         <section className="section cta-final panel" id="contato">
-          <div className="wrap">
-            <div className="sec-index">
-              <span><b>08</b> — Contato</span>
-              <span>Disponível para novos projetos</span>
-            </div>
-          </div>
           <div className="wrap">
             <div className="eyebrow" style={{ justifyContent: "center" }}>
               Vamos conversar
