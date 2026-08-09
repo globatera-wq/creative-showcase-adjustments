@@ -1700,3 +1700,9 @@
     }
   }
 }
+
+@layer components {
+  .parallax-gallery {
+    margin-top: 56px;
+  }
+}
