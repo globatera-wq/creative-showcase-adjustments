@@ -70,16 +70,18 @@ const videos = [
   { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
 ];
 
-const serie185 = [
-  { src: img00.url, cap: "Quadro 01 · Sala de concerto" },
-  { src: img05.url, cap: "Quadro 02 · Direção de fotografia" },
-  { src: img06.url, cap: "Quadro 03 · Luz e cor" },
-  { src: img04.url, cap: "Quadro 04 · No set" },
-  { src: img02.url, cap: "Quadro 05 · Detalhe" },
-  { src: img03.url, cap: "Quadro 06 · Instrumentos" },
-  { src: img01.url, cap: "Quadro 07 · Monitor" },
-  { src: img07.url, cap: "Quadro 08 · Atrás das câmeras" },
+const gusmao: { src: string; cap: string }[] = [
+  { src: img00.url, cap: "Quadro 01" },
+  { src: img05.url, cap: "Quadro 02" },
+  { src: img06.url, cap: "Quadro 03" },
+  { src: img04.url, cap: "Quadro 04" },
+  { src: img02.url, cap: "Quadro 05" },
+  { src: img03.url, cap: "Quadro 06" },
+  { src: img01.url, cap: "Quadro 07" },
+  { src: img07.url, cap: "Quadro 08" },
+  { src: img09.url, cap: "Quadro 09" },
 ];
+
 
 const areas = [
   {
@@ -338,25 +340,32 @@ function Index() {
             </div>
 
             <div className="block-label reveal">
-              <h3>Série 1.85</h3>
-              <p>Quadros em proporção cinematográfica 1.85:1 — quatro por fileira.</p>
+              <h3>Gabriela Gusmão</h3>
+              <p>Captação de câmera e edição de vídeo · projeto realizado por Gabi Oliveira.</p>
             </div>
-            <div className="film-row reveal">
-              {serie185.slice(0, 4).map((f) => (
-                <div className="film-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+            <div className="proj-mosaic reveal">
+              <div className="pm-copy">
+                <div className="pm-kicker">
+                  <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
+                  </svg>
+                  <h3>Gabriela Gusmão</h3>
+                </div>
+                <h4>Captação & Edição</h4>
+                <ul>
+                  <li>Captação de câmera</li>
+                  <li>Edição de vídeo</li>
+                  <li>Correção de cor e finalização</li>
+                </ul>
+              </div>
+              {gusmao.map((f) => (
+                <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
                   <div className="g-cap">{f.cap}</div>
                 </div>
               ))}
             </div>
-            <div className="film-row reveal" style={{ marginTop: 16 }}>
-              {serie185.slice(4, 8).map((f) => (
-                <div className="film-item" key={f.cap} onClick={() => setLightbox(f.src)}>
-                  <img src={f.src} alt={f.cap} loading="lazy" />
-                  <div className="g-cap">{f.cap}</div>
-                </div>
-              ))}
-            </div>
+
           </div>
         </section>
 
