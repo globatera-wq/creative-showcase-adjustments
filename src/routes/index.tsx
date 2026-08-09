@@ -70,16 +70,18 @@ const videos = [
   { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
 ];
 
-const serie185 = [
-  { src: img00.url, cap: "Quadro 01 · Sala de concerto" },
-  { src: img05.url, cap: "Quadro 02 · Direção de fotografia" },
-  { src: img06.url, cap: "Quadro 03 · Luz e cor" },
-  { src: img04.url, cap: "Quadro 04 · No set" },
-  { src: img02.url, cap: "Quadro 05 · Detalhe" },
-  { src: img03.url, cap: "Quadro 06 · Instrumentos" },
-  { src: img01.url, cap: "Quadro 07 · Monitor" },
-  { src: img07.url, cap: "Quadro 08 · Atrás das câmeras" },
+const gusmao: { src: string; cap: string }[] = [
+  { src: img00.url, cap: "Quadro 01" },
+  { src: img05.url, cap: "Quadro 02" },
+  { src: img06.url, cap: "Quadro 03" },
+  { src: img04.url, cap: "Quadro 04" },
+  { src: img02.url, cap: "Quadro 05" },
+  { src: img03.url, cap: "Quadro 06" },
+  { src: img01.url, cap: "Quadro 07" },
+  { src: img07.url, cap: "Quadro 08" },
+  { src: img09.url, cap: "Quadro 09" },
 ];
+
 
 const areas = [
   {
