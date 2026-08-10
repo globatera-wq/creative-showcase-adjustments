@@ -1147,12 +1147,20 @@
   .hero-cta {
     margin-top: var(--s-4);
     gap: 10px;
+    flex-wrap: nowrap;
   }
   .hero-cta .btn {
-    flex: 1 1 auto;
+    flex: 1 1 0;
+    min-width: 0;
     justify-content: center;
-    padding: 14px 18px;
+    padding: 14px 12px;
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
   }
+  .scroll-cue {
+    display: none;
+  }
+
   .section {
     padding: var(--s-7) 0;
   }
