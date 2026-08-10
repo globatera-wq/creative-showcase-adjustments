@@ -895,109 +895,122 @@
     border: 1px solid var(--red-bright);
   }
   .edu-item {
-    padding-left: 22px;
-    border-left: 2px solid var(--red);
-    margin-bottom: 30px;
+    padding-left: var(--s-3);
+    border-left: 1px solid color-mix(in oklab, var(--red-bright) 60%, transparent);
+    margin-bottom: var(--s-4);
   }
   .edu-item .yr {
     color: var(--red-bright);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
   .edu-item h3 {
     font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
     text-transform: none;
-    letter-spacing: 0;
+    letter-spacing: 0.005em;
     color: var(--white);
-    margin-top: 6px;
+    margin-top: 8px;
   }
   .edu-item p {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13.5px;
     margin-top: 4px;
   }
   .lang-row {
     display: flex;
-    gap: 40px;
-    margin-top: 36px;
+    gap: var(--s-6);
+    margin-top: var(--s-4);
   }
   .lang-row div span {
     display: block;
   }
   .lang-row .name {
-    font-weight: 700;
+    font-weight: 600;
     color: var(--cream);
-    font-size: 15px;
+    font-size: 14.5px;
   }
   .lang-row .level {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 3px;
+    color: var(--muted-2);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
   }
 
   /* ---------- CTA + FOOTER ---------- */
   .cta-final {
     text-align: center;
-    padding: 150px 0;
+    padding: var(--s-8) 0;
   }
   .cta-final h2 {
-    font-size: clamp(30px, 5vw, 58px);
-    max-width: 20ch;
-    margin: 0 auto;
+    font-size: clamp(28px, 3.8vw, 46px);
+    max-width: 22ch;
+    margin: var(--s-3) auto 0;
+    line-height: 1.08;
   }
   .cta-final .lede {
-    margin: 26px auto 0;
+    margin: var(--s-3) auto 0;
     text-align: center;
   }
   .cta-final .btn {
-    margin-top: 44px;
+    margin-top: var(--s-5);
   }
   .site-footer {
-    padding: 64px 0 40px;
+    padding: var(--s-6) 0 var(--s-4);
+    border-top: 1px solid var(--line);
   }
   .foot-top {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
-    padding-bottom: 40px;
+    gap: var(--s-4);
+    padding-bottom: var(--s-4);
     border-bottom: 1px solid var(--line);
   }
   .foot-name {
     font-family: var(--font-display);
-    font-size: 22px;
+    font-size: 18px;
+    letter-spacing: 0.03em;
     color: var(--white);
   }
   .foot-role {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 6px;
+    color: var(--muted-2);
+    font-size: 12.5px;
+    line-height: 1.6;
+    margin-top: 8px;
   }
   .foot-links {
     display: flex;
-    gap: 26px;
+    gap: var(--s-3);
     flex-wrap: wrap;
+    align-items: center;
   }
   .foot-links a {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--cream);
+    color: var(--muted);
     position: relative;
+    transition: color 0.3s var(--ease);
+  }
+  .foot-links a:hover {
+    color: var(--cream);
   }
   .foot-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 26px;
-    font-size: 12px;
+    gap: var(--s-1);
+    padding-top: var(--s-3);
+    font-size: 11.5px;
+    line-height: 1.7;
     color: var(--muted-2);
   }
+
 
   /* ---------- REVEAL / LIGHTBOX ---------- */
   .reveal {
