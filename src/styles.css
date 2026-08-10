@@ -827,43 +827,47 @@
   }
   .wf-row {
     display: grid;
-    grid-template-columns: 80px 1fr 1fr;
-    gap: 32px;
-    padding: 34px 0;
+    grid-template-columns: 64px 0.8fr 1.2fr;
+    gap: var(--s-4);
+    padding: var(--s-4) 0;
     border-bottom: 1px solid var(--line);
     align-items: baseline;
   }
   .wf-num {
     font-family: var(--font-display);
-    color: var(--red);
-    font-size: 24px;
+    color: color-mix(in oklab, var(--red-bright) 80%, transparent);
+    font-size: 18px;
+    letter-spacing: 0.04em;
   }
   .wf-row h3 {
     font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 19px;
+    font-weight: 600;
+    font-size: 16px;
     text-transform: none;
     color: var(--white);
-    letter-spacing: 0;
+    letter-spacing: 0.005em;
+    line-height: 1.4;
   }
   .wf-row p {
     color: var(--muted);
-    font-size: 14.5px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 56ch;
   }
 
   /* ---------- SPLIT / SOFTWARE / EDU ---------- */
   .split-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: clamp(40px, 6vw, 88px);
   }
   .soft-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: var(--s-4);
   }
+
   .soft-card {
     width: 104px;
     height: 104px;
