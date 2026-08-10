@@ -175,35 +175,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 40px;
-    background: linear-gradient(180deg, color-mix(in oklab, var(--black) 78%, transparent) 0%, transparent 100%);
+    padding: 20px var(--s-5);
+    background: linear-gradient(180deg, color-mix(in oklab, var(--black) 72%, transparent) 0%, transparent 100%);
     transition: padding 0.3s var(--ease), background 0.3s var(--ease);
   }
   .site-header.scrolled {
-    padding: 14px 40px;
-    background: color-mix(in oklab, var(--black) 94%, transparent);
+    padding: 12px var(--s-5);
+    background: color-mix(in oklab, var(--black) 92%, transparent);
     border-bottom: 1px solid var(--line);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
   }
   .logo {
     font-family: var(--font-display);
-    font-size: 17px;
-    letter-spacing: 0.04em;
+    font-size: 15px;
+    letter-spacing: 0.06em;
     color: var(--white);
     text-transform: uppercase;
   }
   .site-nav {
     display: flex;
-    gap: 34px;
+    gap: var(--s-3);
   }
   .site-nav a {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.14em;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--white);
+    color: color-mix(in oklab, var(--cream) 78%, transparent);
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
+    transition: color 0.3s var(--ease);
+  }
+  .site-nav a:hover {
+    color: var(--white);
   }
   .site-nav a::after {
     content: "";
@@ -212,12 +216,13 @@
     bottom: 0;
     width: 0;
     height: 1px;
-    background: var(--white);
+    background: var(--red-bright);
     transition: width 0.3s var(--ease);
   }
   .site-nav a:hover::after {
     width: 100%;
   }
+
 
   /* ---------- HERO ---------- */
   .hero {
