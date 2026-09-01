@@ -843,7 +843,7 @@
     cursor: pointer;
   }
   .pd-strip .pm-item {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
   }
   .pm-item img,
   .pm-item video {
