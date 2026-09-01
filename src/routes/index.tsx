@@ -70,17 +70,22 @@ const videos = [
   { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
 ];
 
-const gusmao: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Quadro 01" },
-  { src: img05.url, cap: "Quadro 02" },
-  { src: img06.url, cap: "Quadro 03" },
-  { src: img04.url, cap: "Quadro 04" },
-  { src: img02.url, cap: "Quadro 05" },
-  { src: img03.url, cap: "Quadro 06" },
-  { src: img01.url, cap: "Quadro 07" },
-  { src: img07.url, cap: "Quadro 08" },
-  { src: img09.url, cap: "Quadro 09" },
+const discoGrid: { src: string; cap: string }[] = [
+  { src: img00.url, cap: "Estúdio · captação" },
+  { src: img01.url, cap: "Monitoramento de imagem" },
+  { src: img02.url, cap: "Detalhe de instrumento" },
+  { src: img03.url, cap: "Gravação em estúdio" },
+  { src: img04.url, cap: "No set, câmera em mãos" },
+  { src: img05.url, cap: "Direção de fotografia" },
 ];
+
+const discoStrip: { src: string; cap: string }[] = [
+  { src: img06.url, cap: "Preparação em sala escura" },
+  { src: img07.url, cap: "Atrás das câmeras" },
+  { src: img09.url, cap: "Cobertura de palco" },
+  { src: img11.url, cap: "Setup e ajuste de câmera" },
+];
+
 
 
 const areas = [
