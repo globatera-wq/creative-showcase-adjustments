@@ -340,9 +340,10 @@ function Index() {
             </div>
 
             <div className="block-label reveal">
-              <h3>Gabriela Gusmão</h3>
-              <p>Captação de câmera e edição de vídeo · projeto realizado por Gabi Oliveira.</p>
+              <h3>Projeto em destaque</h3>
+              <p>Captação de câmera e edição de vídeo · realizado por Gabi Oliveira.</p>
             </div>
+
             <div className="proj-mosaic reveal">
               <div className="pm-copy">
                 <div className="pm-kicker">
