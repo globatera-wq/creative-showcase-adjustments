@@ -746,71 +746,111 @@
     transform: scale(1.05);
   }
 
-  /* ---------- PROJETO MOSAICO (ref. documentary) ---------- */
-  .proj-mosaic {
+  /* ---------- PROJETO EM DESTAQUE (ref. Disco Autoral) ---------- */
+  .proj-doc {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    gap: var(--s-5);
+    align-items: start;
   }
-  .pm-copy {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 var(--s-4) 0 0;
+  .pd-copy {
+    min-width: 0;
+    max-width: 46ch;
   }
-  .pm-kicker {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+  .pd-meta {
+    margin-bottom: var(--s-3);
+    padding-bottom: var(--s-2);
+    border-bottom: 1px solid var(--line);
+  }
+  .pd-meta .pd-line {
+    display: block;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+  .pd-meta .pd-line strong {
+    font-weight: 600;
+    color: var(--cream);
+  }
+  .pd-copy .pd-lead {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
     margin-bottom: var(--s-3);
   }
-  .pm-kicker .arrow {
-    flex: 0 0 auto;
-    width: 40px;
-    height: 12px;
-    color: var(--red-bright);
-  }
-  .pm-kicker h3 {
-    font-family: var(--font-display, inherit);
-    font-size: clamp(22px, 2.4vw, 32px);
-    letter-spacing: 0.01em;
-    text-transform: uppercase;
-    line-height: 1.05;
-  }
-  .pm-copy h4 {
-    font-family: var(--font-sans);
-    font-size: 11px;
+  .pd-copy .pd-lead strong {
     font-weight: 600;
-    color: var(--muted-2);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    margin-bottom: var(--s-2);
+    color: var(--cream);
   }
-  .pm-copy ul {
+  .pd-copy .pd-lead em {
+    font-style: italic;
+  }
+  .pd-copy p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-bottom: var(--s-3);
+  }
+  .pd-copy ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 var(--s-3);
   }
-  .pm-copy li {
-    font-size: 14px;
+  .pd-copy li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 1.8;
     color: var(--muted);
-    line-height: 2;
+    margin-bottom: 10px;
+  }
+  .pd-copy li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 12px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--red-bright);
+  }
+  .pd-copy li strong {
+    font-weight: 600;
+    color: var(--cream);
+  }
+  .pd-copy li em {
+    font-style: italic;
   }
 
+  /* grid 2 x 3 ao lado do texto */
+  .pd-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  /* faixa inferior com 4 fotos */
+  .pd-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+  }
   .pm-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1.85 / 1;
+    aspect-ratio: 16 / 10;
     background: var(--surface);
     cursor: pointer;
+  }
+  .pd-strip .pm-item {
+    aspect-ratio: 16 / 10;
   }
   .pm-item img,
   .pm-item video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     filter: grayscale(0.2) brightness(0.95);
     transition: filter 0.4s var(--ease), transform 0.6s var(--ease);
   }
@@ -820,15 +860,19 @@
     transform: scale(1.04);
   }
   @media (max-width: 980px) {
-    .proj-mosaic {
+    .proj-doc {
+      grid-template-columns: 1fr;
+      gap: var(--s-4);
+    }
+    .pd-copy {
+      max-width: none;
+    }
+    .pd-strip {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .pm-copy {
-      grid-column: 1 / -1;
-      grid-row: auto;
-      padding: 0 0 10px;
-    }
   }
+
+
 
 
   /* ---------- WORKFLOW ---------- */
@@ -1062,8 +1106,9 @@
 
 @media (max-width: 1100px) {
   .film-row,
-  .proj-mosaic {
-    gap: 10px;
+  .pd-grid,
+  .pd-strip {
+    gap: 8px;
   }
   .wrap {
     padding: 0 var(--s-4);
@@ -1200,8 +1245,9 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
   }
-  .proj-mosaic {
-    gap: 8px;
+  .pd-grid,
+  .pd-strip {
+    gap: 6px;
   }
   .block-label {
     margin-top: var(--s-6);

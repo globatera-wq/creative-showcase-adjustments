@@ -70,17 +70,22 @@ const videos = [
   { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
 ];
 
-const gusmao: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Quadro 01" },
-  { src: img05.url, cap: "Quadro 02" },
-  { src: img06.url, cap: "Quadro 03" },
-  { src: img04.url, cap: "Quadro 04" },
-  { src: img02.url, cap: "Quadro 05" },
-  { src: img03.url, cap: "Quadro 06" },
-  { src: img01.url, cap: "Quadro 07" },
-  { src: img07.url, cap: "Quadro 08" },
-  { src: img09.url, cap: "Quadro 09" },
+const discoGrid: { src: string; cap: string }[] = [
+  { src: img00.url, cap: "Estúdio · captação" },
+  { src: img01.url, cap: "Monitoramento de imagem" },
+  { src: img02.url, cap: "Detalhe de instrumento" },
+  { src: img03.url, cap: "Gravação em estúdio" },
+  { src: img04.url, cap: "No set, câmera em mãos" },
+  { src: img05.url, cap: "Direção de fotografia" },
 ];
+
+const discoStrip: { src: string; cap: string }[] = [
+  { src: img06.url, cap: "Preparação em sala escura" },
+  { src: img07.url, cap: "Atrás das câmeras" },
+  { src: img09.url, cap: "Cobertura de palco" },
+  { src: img11.url, cap: "Setup e ajuste de câmera" },
+];
+
 
 
 const areas = [
@@ -340,31 +345,69 @@ function Index() {
             </div>
 
             <div className="block-label reveal">
-              <h3>Gabriela Gusmão</h3>
-              <p>Captação de câmera e edição de vídeo · projeto realizado por Gabi Oliveira.</p>
+              <h3>Projeto em destaque</h3>
+              <p>Captação, montagem, edição e finalização audiovisual · Gabi Oliveira.</p>
             </div>
-            <div className="proj-mosaic reveal">
-              <div className="pm-copy">
-                <div className="pm-kicker">
-                  <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
-                  </svg>
-                  <h3>Gabriela Gusmão</h3>
+
+            <div className="proj-doc reveal">
+              <div className="pd-copy">
+                <div className="pd-meta">
+                  <span className="pd-line">
+                    Projeto: <strong>Disco Autoral</strong>
+                  </span>
+                  <span className="pd-line">
+                    Artista: <strong>Gabriela Machado</strong>
+                  </span>
                 </div>
-                <h4>Captação & Edição</h4>
+                <p className="pd-lead">
+                  <strong>Captação, montagem, edição e finalização audiovisual</strong> de conteúdos produzidos durante
+                  todo o processo de gravação do disco autoral <em>Equilibrando no Acupe</em>, da artista Gabriela
+                  Machado.
+                </p>
+                <p>
+                  O projeto foi realizado em dois estúdios em São Paulo. Antes do início das gravações, foi realizada
+                  uma reunião de briefing para compreender a proposta artística do disco, suas referências e os
+                  objetivos de comunicação do projeto.
+                </p>
+                <p>A partir desse direcionamento, foram desenvolvidos diferentes conteúdos audiovisuais, incluindo:</p>
                 <ul>
-                  <li>Captação de câmera</li>
-                  <li>Edição de vídeo</li>
-                  <li>Correção de cor e finalização</li>
+                  <li>
+                    <strong>Videoclipe</strong> da faixa que dá nome ao disco, <em>Equilibrando no Acupe</em>;
+                  </li>
+                  <li>
+                    <strong>Vídeo em formato documental</strong>, registrando o processo de produção do primeiro disco
+                    autoral da artista, com participação de convidados;
+                  </li>
+                  <li>
+                    <strong>Conteúdos curtos para redes sociais</strong>, pensados para divulgação do projeto e criação
+                    de materiais para diferentes formatos digitais.
+                  </li>
                 </ul>
+                <p>
+                  O trabalho contemplou o registro do processo de gravação e a criação de uma narrativa audiovisual que
+                  acompanha e valoriza a identidade artística do projeto.
+                </p>
               </div>
-              {gusmao.map((f) => (
+
+              <div className="pd-grid">
+                {discoGrid.map((f) => (
+                  <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+                    <img src={f.src} alt={f.cap} loading="lazy" />
+                    <div className="g-cap">{f.cap}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pd-strip reveal">
+              {discoStrip.map((f) => (
                 <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
                   <div className="g-cap">{f.cap}</div>
                 </div>
               ))}
             </div>
+
 
           </div>
         </section>
