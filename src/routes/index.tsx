@@ -13,10 +13,15 @@ import img08 from "@/assets/img08.jpg.asset.json";
 import img09 from "@/assets/img09.jpg.asset.json";
 import img10 from "@/assets/img10.jpg.asset.json";
 import img11 from "@/assets/img11.jpg.asset.json";
-import vid0 from "@/assets/vid0.mp4.asset.json";
-import vid1 from "@/assets/vid1.mp4.asset.json";
-import vid2 from "@/assets/vid2.mp4.asset.json";
-import vid3 from "@/assets/vid3.mp4.asset.json";
+import gm00 from "@/assets/gm00.jpg.asset.json";
+import gm01 from "@/assets/gm01.jpg.asset.json";
+import gm02 from "@/assets/gm02.jpg.asset.json";
+import gm03 from "@/assets/gm03.jpg.asset.json";
+import gm04 from "@/assets/gm04.jpg.asset.json";
+import gm05 from "@/assets/gm05.jpg.asset.json";
+import gm06 from "@/assets/gm06.jpg.asset.json";
+import gm07 from "@/assets/gm07.jpg.asset.json";
+import gm08 from "@/assets/gm08.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,27 +68,19 @@ const bastidores: { src: string; cap: string }[][] = [
   ],
 ];
 
-const videos = [
-  { video: vid0.url, poster: img08.url, title: "Captação com luz cênica", tag: "Projeto" },
-  { video: vid1.url, poster: img09.url, title: "Cobertura em sala de concerto", tag: "Projeto" },
-  { video: vid2.url, poster: img10.url, title: "Captação de detalhe", tag: "Projeto" },
-  { video: vid3.url, poster: img11.url, title: "Setup e ajuste de câmera", tag: "Projeto" },
+const discoTop: { src: string; cap: string }[] = [
+  { src: gm00.url, cap: "Gabriela Machado — flauta transversal" },
+  { src: gm01.url, cap: "Gabriela Machado — flauta, outro ângulo" },
+  { src: gm02.url, cap: "Convidado — sax" },
+  { src: gm03.url, cap: "Convidado — boné vermelho, percussão" },
 ];
 
-const discoGrid: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Estúdio · captação" },
-  { src: img01.url, cap: "Monitoramento de imagem" },
-  { src: img02.url, cap: "Detalhe de instrumento" },
-  { src: img03.url, cap: "Gravação em estúdio" },
-  { src: img04.url, cap: "No set, câmera em mãos" },
-  { src: img05.url, cap: "Direção de fotografia" },
-];
-
-const discoStrip: { src: string; cap: string }[] = [
-  { src: img06.url, cap: "Preparação em sala escura" },
-  { src: img07.url, cap: "Atrás das câmeras" },
-  { src: img09.url, cap: "Cobertura de palco" },
-  { src: img11.url, cap: "Setup e ajuste de câmera" },
+const discoBottom: { src: string; cap: string }[] = [
+  { src: gm04.url, cap: "Convidada — cavaquinho" },
+  { src: gm05.url, cap: "Convidado — violão" },
+  { src: gm06.url, cap: "Convidado — sanfona" },
+  { src: gm07.url, cap: "Convidada — piano" },
+  { src: gm08.url, cap: "Convidado — bateria" },
 ];
 
 
@@ -338,31 +335,18 @@ function Index() {
               <p className="lede">Trabalhos de captação, direção de imagem e pós-produção realizados em campo.</p>
             </div>
 
-            <div className="work-grid reveal">
-              {videos.map((v) => (
-                <VideoCard key={v.title} {...v} />
-              ))}
-            </div>
-
-            <div className="block-label reveal">
-              <h3>Projeto em destaque</h3>
-              <p>Captação, montagem, edição e finalização audiovisual · Gabi Oliveira.</p>
-            </div>
-
-            <div className="proj-doc reveal">
-              <div className="pd-copy">
-                <div className="pd-meta">
-                  <span className="pd-line">
-                    Projeto: <strong>Disco Autoral</strong>
-                  </span>
-                  <span className="pd-line">
-                    Artista: <strong>Gabriela Machado</strong>
-                  </span>
+            <div className="projects-content reveal">
+              <div className="projects-text">
+                <div className="pm-kicker">
+                  <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                    <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
+                  </svg>
+                  <h3>Disco Autoral</h3>
                 </div>
-                <p className="pd-lead">
+                <h4>Gabriela Machado</h4>
+                <p>
                   <strong>Captação, montagem, edição e finalização audiovisual</strong> de conteúdos produzidos durante
-                  todo o processo de gravação do disco autoral <em>Equilibrando no Acupe</em>, da artista Gabriela
-                  Machado.
+                  o processo de gravação do disco autoral <em>Equilibrando no Acupe</em>, da artista Gabriela Machado.
                 </p>
                 <p>
                   O projeto foi realizado em dois estúdios em São Paulo. Antes do início das gravações, foi realizada
@@ -376,11 +360,11 @@ function Index() {
                   </li>
                   <li>
                     <strong>Vídeo em formato documental</strong>, registrando o processo de produção do primeiro disco
-                    autoral da artista, com participação de convidados;
+                    autoral da artista, com participação dos músicos convidados;
                   </li>
                   <li>
-                    <strong>Conteúdos curtos para redes sociais</strong>, pensados para divulgação do projeto e criação
-                    de materiais para diferentes formatos digitais.
+                    <strong>Conteúdos curtos para redes sociais</strong>, desenvolvidos para divulgação do projeto e
+                    adaptados aos formatos digitais.
                   </li>
                 </ul>
                 <p>
@@ -388,22 +372,19 @@ function Index() {
                   acompanha e valoriza a identidade artística do projeto.
                 </p>
               </div>
-
-              <div className="pd-grid">
-                {discoGrid.map((f) => (
-                  <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+              <div className="projects-gallery-top">
+                {discoTop.map((f) => (
+                  <div className="projects-gallery-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                     <img src={f.src} alt={f.cap} loading="lazy" />
-                    <div className="g-cap">{f.cap}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="pd-strip reveal">
-              {discoStrip.map((f) => (
-                <div className="pm-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+            <div className="projects-gallery-bottom reveal">
+              {discoBottom.map((f) => (
+                <div className="projects-gallery-item" key={f.cap} onClick={() => setLightbox(f.src)}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
-                  <div className="g-cap">{f.cap}</div>
                 </div>
               ))}
             </div>
@@ -577,48 +558,3 @@ function Index() {
   );
 }
 
-function VideoCard({
-  video,
-  poster,
-  title,
-  tag,
-}: {
-  video: string;
-  poster: string;
-  title: string;
-  tag: string;
-}) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
-
-  const toggle = () => {
-    const el = ref.current;
-    if (!el) return;
-    if (playing) {
-      el.pause();
-      setPlaying(false);
-    } else {
-      if (!el.src) el.src = video;
-      void el.play();
-      setPlaying(true);
-    }
-  };
-
-  return (
-    <div className={`work-card${playing ? " playing" : ""}`} onClick={toggle}>
-      <div className="work-media">
-        <img src={poster} alt={title} loading="lazy" />
-        <video ref={ref} muted loop playsInline preload="none" />
-        <div className="play-badge">
-          <svg viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </div>
-      </div>
-      <div className="work-info">
-        <h3>{title}</h3>
-        <span>{tag}</span>
-      </div>
-    </div>
-  );
-}
