@@ -92,12 +92,33 @@ const discoBottom: { src: string; cap: string }[] = [
 
 const areas = [
   {
-    title: "Produção Audiovisual",
-    text: "Planejamento, coordenação e execução de produções com foco em organização, eficiência e qualidade técnica.",
+    title: "Edição",
+    text: "Montagem, ritmo e narrativa em pós-produção — cortes precisos e storytelling visual.",
+    icon: (
+      <svg viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="2.4" />
+        <circle cx="6" cy="18" r="2.4" />
+        <path d="M8 7.5L20 18M8 16.5L20 6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Audiovisual",
+    text: "Captação e direção de imagem com linguagem cinematográfica, do enquadramento à narrativa visual.",
     icon: (
       <svg viewBox="0 0 24 24">
         <rect x="2" y="6" width="15" height="12" rx="1.5" />
         <path d="M17 10l5-3v10l-5-3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Produção",
+    text: "Planejamento, coordenação e execução de produções com foco em organização e eficiência.",
+    icon: (
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="1.5" />
+        <path d="M8 8h8M8 12h8M8 16h5" />
       </svg>
     ),
   },
