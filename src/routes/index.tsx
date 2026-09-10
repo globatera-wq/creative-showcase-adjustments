@@ -22,6 +22,11 @@ import gm05 from "@/assets/gm05.jpg.asset.json";
 import gm06 from "@/assets/gm06.jpg.asset.json";
 import gm07 from "@/assets/gm07.jpg.asset.json";
 import gm08 from "@/assets/gm08.jpg.asset.json";
+import retrato from "@/assets/retrato.jpg.asset.json";
+import vid0 from "@/assets/vid0.mp4.asset.json";
+import vid1 from "@/assets/vid1.mp4.asset.json";
+import vid2 from "@/assets/vid2.mp4.asset.json";
+import vid3 from "@/assets/vid3.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,14 +90,66 @@ const discoBottom: { src: string; cap: string }[] = [
 
 
 
+const editList = [
+  {
+    key: "vid0",
+    video: vid0.url,
+    poster: img06.url,
+    title: "Captação com luz cênica",
+    desc: "Edição do material captado com iluminação cênica controlada, priorizando contraste e atmosfera no corte final.",
+  },
+  {
+    key: "vid1",
+    video: vid1.url,
+    poster: img09.url,
+    title: "Cobertura em sala de concerto",
+    desc: "Montagem de cobertura multi-câmera em apresentação ao vivo, com foco em ritmo musical e continuidade entre ângulos.",
+  },
+  {
+    key: "vid2",
+    video: vid2.url,
+    poster: img10.url,
+    title: "Captação de detalhe",
+    desc: "Corte de planos de detalhe, reforçando textura e proximidade na narrativa visual.",
+  },
+  {
+    key: "vid3",
+    video: vid3.url,
+    poster: img11.url,
+    title: "Setup e ajuste de câmera",
+    desc: "Edição do processo técnico de preparação de equipamento, com transições dinâmicas entre etapas.",
+  },
+];
+
 const areas = [
   {
-    title: "Produção Audiovisual",
-    text: "Planejamento, coordenação e execução de produções com foco em organização, eficiência e qualidade técnica.",
+    title: "Edição",
+    text: "Montagem, ritmo e narrativa em pós-produção — cortes precisos e storytelling visual.",
+    icon: (
+      <svg viewBox="0 0 24 24">
+        <circle cx="6" cy="6" r="2.4" />
+        <circle cx="6" cy="18" r="2.4" />
+        <path d="M8 7.5L20 18M8 16.5L20 6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Audiovisual",
+    text: "Captação e direção de imagem com linguagem cinematográfica, do enquadramento à narrativa visual.",
     icon: (
       <svg viewBox="0 0 24 24">
         <rect x="2" y="6" width="15" height="12" rx="1.5" />
         <path d="M17 10l5-3v10l-5-3" />
+      </svg>
+    ),
+  },
+  {
+    title: "Produção",
+    text: "Planejamento, coordenação e execução de produções com foco em organização e eficiência.",
+    icon: (
+      <svg viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="1.5" />
+        <path d="M8 8h8M8 12h8M8 16h5" />
       </svg>
     ),
   },
@@ -160,6 +217,7 @@ const workflow = [
 function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [playing, setPlaying] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -183,10 +241,10 @@ function Index() {
         </a>
         <nav className="site-nav">
           <a href="#sobre">Sobre</a>
-          <a href="#atuacao">Atuação</a>
-          <a href="#bastidores">Bastidores</a>
           <a href="#projetos">Projetos</a>
-          <a href="#processo">Processo</a>
+          <a href="#edicao">Edição</a>
+          <a href="#live-show">Live &amp; Show</a>
+          <a href="#videoclipes">Videoclipes</a>
           <a href="#contato">Contato</a>
         </nav>
       </header>
@@ -198,7 +256,7 @@ function Index() {
           <div className="hero-overlay" />
           <div className="hero-grid">
             <div className="hero-copy">
-              <div className="hero-name">
+              <div className="hero-name" style={{ fontSize: "clamp(64px, 9vw, 140px)", lineHeight: 0.92 }}>
                 Gabi
                 <br />
                 Oliveira
@@ -226,8 +284,8 @@ function Index() {
           <div className="wrap about">
             <div className="about-media reveal">
               <div className="frame">
-                <img src={img07.url} alt="Gabi Oliveira em produção audiovisual" loading="lazy" />
-                <div className="tag">Atrás das câmeras</div>
+                <img src={retrato.url} alt="Retrato de Gabi Oliveira" loading="lazy" />
+                <div className="tag">Gabi Oliveira</div>
               </div>
             </div>
             <div className="about-body reveal">
@@ -374,7 +432,7 @@ function Index() {
               </div>
               <div className="projects-gallery-top">
                 {discoTop.map((f) => (
-                  <div className="projects-gallery-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+                  <div className="projects-gallery-item" key={f.cap}>
                     <img src={f.src} alt={f.cap} loading="lazy" />
                   </div>
                 ))}
@@ -383,13 +441,71 @@ function Index() {
 
             <div className="projects-gallery-bottom reveal">
               {discoBottom.map((f) => (
-                <div className="projects-gallery-item" key={f.cap} onClick={() => setLightbox(f.src)}>
+                <div className="projects-gallery-item" key={f.cap}>
                   <img src={f.src} alt={f.cap} loading="lazy" />
                 </div>
               ))}
             </div>
 
 
+          </div>
+        </section>
+
+        {/* EDIÇÃO */}
+        <section className="section" id="edicao">
+          <div className="wrap">
+            <div className="areas-head reveal">
+              <div>
+                <div className="eyebrow">Portfólio</div>
+                <h2 className="section-title">Edição</h2>
+              </div>
+              <p className="lede">
+                Montagem e finalização — do material bruto ao corte final, com identidade visual e ritmo narrativo.
+              </p>
+            </div>
+            <div className="edit-list reveal">
+              {editList.map((e) => (
+                <div className="edit-row" key={e.key}>
+                  <div
+                    className={`edit-video${playing === e.key ? " playing" : ""}`}
+                    onClick={() => setPlaying(playing === e.key ? null : e.key)}
+                  >
+                    <img src={e.poster} alt={e.title} loading="lazy" />
+                    <video
+                      src={playing === e.key ? e.video : undefined}
+                      muted
+                      loop
+                      playsInline
+                      preload="none"
+                      autoPlay={playing === e.key}
+                    />
+                    <div className="play-badge">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="edit-info">
+                    <h3 className="edit-title">{e.title}</h3>
+                    <p className="edit-desc">{e.desc}</p>
+                    <dl className="edit-meta">
+                      <div>
+                        <dt>Direção</dt>
+                        <dd>Gabi Oliveira</dd>
+                      </div>
+                      <div>
+                        <dt>Editor</dt>
+                        <dd>Gabi Oliveira</dd>
+                      </div>
+                      <div>
+                        <dt>Data</dt>
+                        <dd>2026</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
