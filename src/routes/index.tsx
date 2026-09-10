@@ -90,6 +90,37 @@ const discoBottom: { src: string; cap: string }[] = [
 
 
 
+const editList = [
+  {
+    key: "vid0",
+    video: vid0.url,
+    poster: img06.url,
+    title: "Captação com luz cênica",
+    desc: "Edição do material captado com iluminação cênica controlada, priorizando contraste e atmosfera no corte final.",
+  },
+  {
+    key: "vid1",
+    video: vid1.url,
+    poster: img09.url,
+    title: "Cobertura em sala de concerto",
+    desc: "Montagem de cobertura multi-câmera em apresentação ao vivo, com foco em ritmo musical e continuidade entre ângulos.",
+  },
+  {
+    key: "vid2",
+    video: vid2.url,
+    poster: img10.url,
+    title: "Captação de detalhe",
+    desc: "Corte de planos de detalhe, reforçando textura e proximidade na narrativa visual.",
+  },
+  {
+    key: "vid3",
+    video: vid3.url,
+    poster: img11.url,
+    title: "Setup e ajuste de câmera",
+    desc: "Edição do processo técnico de preparação de equipamento, com transições dinâmicas entre etapas.",
+  },
+];
+
 const areas = [
   {
     title: "Edição",
@@ -186,6 +217,7 @@ const workflow = [
 function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [playing, setPlaying] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
