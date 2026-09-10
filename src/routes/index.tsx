@@ -22,6 +22,11 @@ import gm05 from "@/assets/gm05.jpg.asset.json";
 import gm06 from "@/assets/gm06.jpg.asset.json";
 import gm07 from "@/assets/gm07.jpg.asset.json";
 import gm08 from "@/assets/gm08.jpg.asset.json";
+import retrato from "@/assets/retrato.jpg.asset.json";
+import vid0 from "@/assets/vid0.mp4.asset.json";
+import vid1 from "@/assets/vid1.mp4.asset.json";
+import vid2 from "@/assets/vid2.mp4.asset.json";
+import vid3 from "@/assets/vid3.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -183,10 +188,10 @@ function Index() {
         </a>
         <nav className="site-nav">
           <a href="#sobre">Sobre</a>
-          <a href="#atuacao">Atuação</a>
-          <a href="#bastidores">Bastidores</a>
           <a href="#projetos">Projetos</a>
-          <a href="#processo">Processo</a>
+          <a href="#edicao">Edição</a>
+          <a href="#live-show">Live &amp; Show</a>
+          <a href="#videoclipes">Videoclipes</a>
           <a href="#contato">Contato</a>
         </nav>
       </header>
@@ -198,7 +203,7 @@ function Index() {
           <div className="hero-overlay" />
           <div className="hero-grid">
             <div className="hero-copy">
-              <div className="hero-name">
+              <div className="hero-name" style={{ fontSize: "clamp(64px, 9vw, 140px)", lineHeight: 0.92 }}>
                 Gabi
                 <br />
                 Oliveira
@@ -226,8 +231,8 @@ function Index() {
           <div className="wrap about">
             <div className="about-media reveal">
               <div className="frame">
-                <img src={img07.url} alt="Gabi Oliveira em produção audiovisual" loading="lazy" />
-                <div className="tag">Atrás das câmeras</div>
+                <img src={retrato.url} alt="Retrato de Gabi Oliveira" loading="lazy" />
+                <div className="tag">Gabi Oliveira</div>
               </div>
             </div>
             <div className="about-body reveal">
