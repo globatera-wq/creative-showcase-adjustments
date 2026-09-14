@@ -972,6 +972,77 @@
     color: var(--cream);
     margin: 0;
   }
+
+  /* LIVE & SHOW */
+  .live-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .live-item {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #141414;
+    cursor: zoom-in;
+  }
+  .live-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .live-item:hover img {
+    transform: scale(1.04);
+  }
+
+  /* VIDEOCLIPES */
+  .clip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .clip-card .edit-video {
+    aspect-ratio: 16 / 9;
+  }
+  .clip-info {
+    padding-top: 16px;
+    border-top: 1px solid var(--line, #2a2a2a);
+    margin-top: 16px;
+  }
+  .clip-title {
+    font-family: var(--font-display, inherit);
+    font-size: 22px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin: 0 0 6px;
+  }
+  .clip-artist {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .live-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .clip-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  @media (max-width: 560px) {
+    .live-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @media (max-width: 900px) {
     .edit-row,
     .edit-row:nth-child(even) {
