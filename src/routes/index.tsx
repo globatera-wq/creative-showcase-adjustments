@@ -121,6 +121,23 @@ const editList = [
   },
 ];
 
+const liveShow: { src: string; cap: string }[] = [
+  { src: img00.url, cap: "Sala de concerto · captação ao vivo" },
+  { src: img09.url, cap: "Cobertura de palco" },
+  { src: img01.url, cap: "Monitoramento de imagem" },
+  { src: img08.url, cap: "Luz cênica em cena" },
+  { src: img03.url, cap: "Instrumentos em performance" },
+  { src: img02.url, cap: "Plano de detalhe no show" },
+];
+
+const videoclipes = [
+  { key: "clip0", video: vid0.url, poster: img06.url, title: "Luz cênica", artist: "Gabriela Machado" },
+  { key: "clip1", video: vid1.url, poster: img09.url, title: "Ao vivo em concerto", artist: "Gabriela Machado" },
+  { key: "clip2", video: vid2.url, poster: img10.url, title: "Detalhes", artist: "Projeto autoral" },
+  { key: "clip3", video: vid3.url, poster: img11.url, title: "Making of", artist: "Projeto autoral" },
+];
+
+
 const areas = [
   {
     title: "Edição",
@@ -509,7 +526,76 @@ function Index() {
           </div>
         </section>
 
+        {/* LIVE & SHOW */}
+        <section className="section" id="live-show">
+          <div className="wrap">
+            <div className="areas-head reveal">
+              <div>
+                <div className="eyebrow">Ao vivo</div>
+                <h2 className="section-title">Live &amp; Show</h2>
+              </div>
+              <p className="lede">
+                Captação em tempo real de apresentações e concertos — multi-câmera, luz cênica e leitura musical do
+                palco.
+              </p>
+            </div>
+            <div className="live-grid reveal">
+              {liveShow.map((item) => (
+                <div className="live-item" key={item.cap} onClick={() => setLightbox(item.src)}>
+                  <img src={item.src} alt={item.cap} loading="lazy" />
+                  <div className="g-cap">{item.cap}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* VIDEOCLIPES */}
+        <section className="section" id="videoclipes">
+          <div className="wrap">
+            <div className="areas-head reveal">
+              <div>
+                <div className="eyebrow">Portfólio</div>
+                <h2 className="section-title">Videoclipes</h2>
+              </div>
+              <p className="lede">
+                Direção de imagem e montagem de clipes musicais, do conceito visual ao corte final.
+              </p>
+            </div>
+            <div className="clip-grid reveal">
+              {videoclipes.map((c) => (
+                <div className="clip-card" key={c.key}>
+                  <div
+                    className={`edit-video${playing === c.key ? " playing" : ""}`}
+                    onClick={() => setPlaying(playing === c.key ? null : c.key)}
+                  >
+                    <img src={c.poster} alt={c.title} loading="lazy" />
+                    <video
+                      src={playing === c.key ? c.video : undefined}
+                      muted
+                      loop
+                      playsInline
+                      preload="none"
+                      autoPlay={playing === c.key}
+                    />
+                    <div className="play-badge">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="clip-info">
+                    <h3 className="clip-title">{c.title}</h3>
+                    <p className="clip-artist">{c.artist}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* PROCESSO */}
+
         <section className="section tight panel" id="processo">
           <div className="wrap">
             <div className="reveal" style={{ marginBottom: 50 }}>
