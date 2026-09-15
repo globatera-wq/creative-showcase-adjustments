@@ -64,7 +64,11 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
     background: var(--black);
+  }
+  section[id] {
+    scroll-margin-top: 80px;
   }
   body {
     background: var(--black);
