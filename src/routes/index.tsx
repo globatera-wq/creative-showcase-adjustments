@@ -132,11 +132,9 @@ const liveShow: { src: string; cap: string }[] = [
   { src: img08.url, cap: "Iluminação cênica em show" },
 ];
 
-const videoclipePhotos = [
-  { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" },
-  { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" },
-  { src: paulo03.url, cap: "Paulo Gusmão ao violão, de fone e óculos" },
-];
+const pauloPerfil = { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" };
+const pauloPartitura = { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" };
+const pauloFone = { src: paulo03.url, cap: "Paulo Gusmão ao violão, de fone e óculos" };
 
 
 const areas = [
@@ -502,16 +500,16 @@ function Index() {
                 </div>
                 <div className="videoclipe-photo-grid">
                   <div className="videoclipe-photo">
-                    <img src={videoclipePhotos[0].src} alt={videoclipePhotos[0].cap} loading="lazy" />
+                    <img src={pauloPerfil.src} alt={pauloPerfil.cap} loading="lazy" />
                   </div>
                   <div className="videoclipe-photo pending">
                     <span>Foto pendente — mão com partitura</span>
                   </div>
                   <div className="videoclipe-photo">
-                    <img src={videoclipePhotos[1].src} alt={videoclipePhotos[1].cap} loading="lazy" />
+                    <img src={pauloPartitura.src} alt={pauloPartitura.cap} loading="lazy" />
                   </div>
                   <div className="videoclipe-photo">
-                    <img src={videoclipePhotos[2].src} alt={videoclipePhotos[2].cap} loading="lazy" />
+                    <img src={pauloFone.src} alt={pauloFone.cap} loading="lazy" />
                   </div>
                 </div>
               </div>
