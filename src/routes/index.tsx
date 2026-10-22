@@ -23,6 +23,10 @@ import gm06 from "@/assets/gm06.jpg.asset.json";
 import gm07 from "@/assets/gm07.jpg.asset.json";
 import gm08 from "@/assets/gm08.jpg.asset.json";
 import retrato from "@/assets/retrato.jpg.asset.json";
+import paulo01 from "@/assets/paulo01.jpg.asset.json";
+import paulo02 from "@/assets/paulo02.jpg.asset.json";
+import paulo03 from "@/assets/paulo03.jpg.asset.json";
+import pauloVertical from "@/assets/paulo-vertical.jpg.asset.json";
 import vid0 from "@/assets/vid0.mp4.asset.json";
 import vid1 from "@/assets/vid1.mp4.asset.json";
 import vid2 from "@/assets/vid2.mp4.asset.json";
@@ -122,20 +126,15 @@ const editList = [
 ];
 
 const liveShow: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Sala de concerto · captação ao vivo" },
+  { src: img00.url, cap: "Cobertura ao vivo — sala de concerto" },
+  { src: img01.url, cap: "Monitoramento de imagem em tempo real" },
   { src: img09.url, cap: "Cobertura de palco" },
-  { src: img01.url, cap: "Monitoramento de imagem" },
-  { src: img08.url, cap: "Luz cênica em cena" },
-  { src: img03.url, cap: "Instrumentos em performance" },
-  { src: img02.url, cap: "Plano de detalhe no show" },
+  { src: img08.url, cap: "Iluminação cênica em show" },
 ];
 
-const videoclipes = [
-  { key: "clip0", video: vid0.url, poster: img06.url, title: "Luz cênica", artist: "Gabriela Machado" },
-  { key: "clip1", video: vid1.url, poster: img09.url, title: "Ao vivo em concerto", artist: "Gabriela Machado" },
-  { key: "clip2", video: vid2.url, poster: img10.url, title: "Detalhes", artist: "Projeto autoral" },
-  { key: "clip3", video: vid3.url, poster: img11.url, title: "Making of", artist: "Projeto autoral" },
-];
+const pauloPerfil = { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" };
+const pauloPartitura = { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" };
+const pauloFone = { src: paulo03.url, cap: "Paulo Gusmão ao violão, de fone e óculos" };
 
 
 const areas = [
@@ -464,8 +463,70 @@ function Index() {
               ))}
             </div>
 
+            <div className="block-label reveal" id="videoclipes">
+              <h3>Videoclipes</h3>
+              <p>Captação, montagem, edição e finalização audiovisual de videoclipes.</p>
+            </div>
+
+            <div className="videoclipe-content reveal">
+              <div className="videoclipe-left">
+                <div className="pm-copy">
+                  <div className="pm-kicker">
+                    <svg className="arrow" viewBox="0 0 54 12" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                      <path d="M0 6h50M45 1.5L51 6l-6 4.5" />
+                    </svg>
+                    <h3>Videoclipes</h3>
+                  </div>
+                  <h4>Paulo Gusmão</h4>
+                  <p>
+                    Ao longo da parceria com o artista Paulo Gusmão, foram desenvolvidos diferentes projetos de
+                    videoclipes, cada um com uma proposta visual e necessidades específicas de gravação.
+                  </p>
+                  <p>
+                    Antes de cada produção, é realizada uma reunião de briefing para compreender a identidade da música,
+                    as referências visuais do artista, os instrumentos utilizados e a proposta estética desejada para o
+                    vídeo. A partir dessas informações, é planejada a captação de acordo com as características de cada
+                    projeto e do estúdio escolhido.
+                  </p>
+                  <p>
+                    Além da produção do videoclipe completo da música, há em alguns projetos de videoclipes captações de{" "}
+                    <strong>making of e conteúdos complementares</strong>, que podem ser incorporados ao próprio vídeo ou
+                    utilizados na criação de chamadas, teasers e conteúdos para divulgação nas redes sociais.
+                  </p>
+                  <p>
+                    O trabalho busca unir a identidade musical de cada faixa a uma narrativa visual coerente, criando
+                    conteúdos que valorizem tanto a performance do artista quanto a atmosfera de cada produção.
+                  </p>
+                </div>
+                <div className="videoclipe-photo-grid">
+                  <div className="videoclipe-photo">
+                    <img src={pauloPerfil.src} alt={pauloPerfil.cap} loading="lazy" />
+                  </div>
+                  <div className="videoclipe-photo pending">
+                    <span>Foto pendente — mão com partitura</span>
+                  </div>
+                  <div className="videoclipe-photo">
+                    <img src={pauloPartitura.src} alt={pauloPartitura.cap} loading="lazy" />
+                  </div>
+                  <div className="videoclipe-photo">
+                    <img src={pauloFone.src} alt={pauloFone.cap} loading="lazy" />
+                  </div>
+                </div>
+              </div>
+              <div className="videoclipe-video">
+                <img
+                  src={pauloVertical.url}
+                  alt="Videoclipe vertical — Paulo Gusmão"
+                  loading="lazy"
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                />
+                <div className="videoclipe-note">Vídeo vertical · arquivo separado (video-gusmao.mp4)</div>
+              </div>
+            </div>
 
           </div>
+
+
         </section>
 
         {/* EDIÇÃO */}
@@ -531,17 +592,17 @@ function Index() {
           <div className="wrap">
             <div className="areas-head reveal">
               <div>
-                <div className="eyebrow">Ao vivo</div>
+                <div className="eyebrow">Portfólio</div>
                 <h2 className="section-title">Live &amp; Show</h2>
               </div>
               <p className="lede">
-                Captação em tempo real de apresentações e concertos — multi-câmera, luz cênica e leitura musical do
-                palco.
+                Cobertura ao vivo de shows, concertos e apresentações — captação e direção de imagem em tempo real, com
+                precisão técnica sob pressão de palco.
               </p>
             </div>
-            <div className="live-grid reveal">
+            <div className="show-grid reveal">
               {liveShow.map((item) => (
-                <div className="live-item" key={item.cap} onClick={() => setLightbox(item.src)}>
+                <div className="show-item" key={item.cap} onClick={() => setLightbox(item.src)}>
                   <img src={item.src} alt={item.cap} loading="lazy" />
                   <div className="g-cap">{item.cap}</div>
                 </div>
@@ -550,49 +611,6 @@ function Index() {
           </div>
         </section>
 
-        {/* VIDEOCLIPES */}
-        <section className="section" id="videoclipes">
-          <div className="wrap">
-            <div className="areas-head reveal">
-              <div>
-                <div className="eyebrow">Portfólio</div>
-                <h2 className="section-title">Videoclipes</h2>
-              </div>
-              <p className="lede">
-                Direção de imagem e montagem de clipes musicais, do conceito visual ao corte final.
-              </p>
-            </div>
-            <div className="clip-grid reveal">
-              {videoclipes.map((c) => (
-                <div className="clip-card" key={c.key}>
-                  <div
-                    className={`edit-video${playing === c.key ? " playing" : ""}`}
-                    onClick={() => setPlaying(playing === c.key ? null : c.key)}
-                  >
-                    <img src={c.poster} alt={c.title} loading="lazy" />
-                    <video
-                      src={playing === c.key ? c.video : undefined}
-                      muted
-                      loop
-                      playsInline
-                      preload="none"
-                      autoPlay={playing === c.key}
-                    />
-                    <div className="play-badge">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="clip-info">
-                    <h3 className="clip-title">{c.title}</h3>
-                    <p className="clip-artist">{c.artist}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* PROCESSO */}
 
