@@ -23,6 +23,10 @@ import gm06 from "@/assets/gm06.jpg.asset.json";
 import gm07 from "@/assets/gm07.jpg.asset.json";
 import gm08 from "@/assets/gm08.jpg.asset.json";
 import retrato from "@/assets/retrato.jpg.asset.json";
+import paulo01 from "@/assets/paulo01.jpg.asset.json";
+import paulo02 from "@/assets/paulo02.jpg.asset.json";
+import paulo03 from "@/assets/paulo03.jpg.asset.json";
+import pauloVertical from "@/assets/paulo-vertical.jpg.asset.json";
 import vid0 from "@/assets/vid0.mp4.asset.json";
 import vid1 from "@/assets/vid1.mp4.asset.json";
 import vid2 from "@/assets/vid2.mp4.asset.json";
@@ -122,19 +126,16 @@ const editList = [
 ];
 
 const liveShow: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Sala de concerto · captação ao vivo" },
+  { src: img00.url, cap: "Cobertura ao vivo — sala de concerto" },
+  { src: img01.url, cap: "Monitoramento de imagem em tempo real" },
   { src: img09.url, cap: "Cobertura de palco" },
-  { src: img01.url, cap: "Monitoramento de imagem" },
-  { src: img08.url, cap: "Luz cênica em cena" },
-  { src: img03.url, cap: "Instrumentos em performance" },
-  { src: img02.url, cap: "Plano de detalhe no show" },
+  { src: img08.url, cap: "Iluminação cênica em show" },
 ];
 
-const videoclipes = [
-  { key: "clip0", video: vid0.url, poster: img06.url, title: "Luz cênica", artist: "Gabriela Machado" },
-  { key: "clip1", video: vid1.url, poster: img09.url, title: "Ao vivo em concerto", artist: "Gabriela Machado" },
-  { key: "clip2", video: vid2.url, poster: img10.url, title: "Detalhes", artist: "Projeto autoral" },
-  { key: "clip3", video: vid3.url, poster: img11.url, title: "Making of", artist: "Projeto autoral" },
+const videoclipePhotos = [
+  { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" },
+  { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" },
+  { src: paulo03.url, cap: "Paulo Gusmão ao violão, de fone e óculos" },
 ];
 
 
