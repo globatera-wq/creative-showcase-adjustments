@@ -978,21 +978,55 @@
     margin: 0;
   }
 
-  /* LIVE & SHOW */
-  .show-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+  /* LIVE & SHOW — texto à esquerda + mosaico 2x4 à direita (referência aprovada) */
+  .live-layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
     margin-top: 40px;
   }
-  .show-item {
+  .live-copy {
+    flex: 0 0 32%;
+    min-width: 0;
+    padding-top: 8px;
+  }
+  .live-copy h3 {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cream);
+    margin: 0 0 14px;
+  }
+  .live-copy > p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--cream);
+    margin: 0 0 40px;
+    max-width: 34ch;
+  }
+  .live-artists p {
+    font-size: 15px;
+    color: var(--cream);
+    margin: 0 0 18px;
+  }
+  .live-artists span {
+    color: var(--muted-2);
+  }
+  .live-mosaic {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    min-width: 0;
+  }
+  .live-photo {
     position: relative;
-    aspect-ratio: 1.4;
+    aspect-ratio: 1.45;
     overflow: hidden;
     background: #141414;
     cursor: zoom-in;
   }
-  .show-item img {
+  .live-photo img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1000,8 +1034,21 @@
     object-fit: cover;
     transition: transform 0.5s var(--ease);
   }
-  .show-item:hover img {
+  .live-photo:hover img {
     transform: scale(1.04);
+  }
+  .live-photo.pending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #3a3a3a;
+    color: #6b665e;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px;
+    cursor: default;
   }
 
   /* ---------- VIDEOCLIPES (Paulo Gusmão) ---------- */
@@ -1107,8 +1154,22 @@
       padding: 0 0 10px;
     }
   }
+  @media (max-width: 900px) {
+    .live-layout {
+      flex-direction: column;
+      gap: 28px;
+    }
+    .live-copy {
+      flex: none;
+      width: 100%;
+    }
+    .live-copy > p {
+      max-width: none;
+      margin-bottom: 24px;
+    }
+  }
   @media (max-width: 720px) {
-    .show-grid {
+    .live-mosaic {
       grid-template-columns: 1fr;
     }
   }

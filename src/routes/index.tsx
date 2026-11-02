@@ -125,12 +125,11 @@ const editList = [
   },
 ];
 
-const liveShow: { src: string; cap: string }[] = [
-  { src: img00.url, cap: "Cobertura ao vivo — sala de concerto" },
-  { src: img01.url, cap: "Monitoramento de imagem em tempo real" },
-  { src: img09.url, cap: "Cobertura de palco" },
-  { src: img08.url, cap: "Iluminação cênica em show" },
-];
+// Live & Show — 8 quadros do mosaico; fotos reais serão enviadas pela cliente
+const liveShow: { src: string | null; cap: string }[] = Array.from({ length: 8 }, (_, i) => ({
+  src: null,
+  cap: `Live & Show — foto ${i + 1}`,
+}));
 
 const pauloPerfil = { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" };
 const pauloPartitura = { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" };
@@ -600,13 +599,34 @@ function Index() {
                 precisão técnica sob pressão de palco.
               </p>
             </div>
-            <div className="show-grid reveal">
-              {liveShow.map((item) => (
-                <div className="show-item" key={item.cap} onClick={() => setLightbox(item.src)}>
-                  <img src={item.src} alt={item.cap} loading="lazy" />
-                  <div className="g-cap">{item.cap}</div>
+            <div className="live-layout reveal">
+              <div className="live-copy">
+                <h3>Show Gravado/Lives</h3>
+                <p>
+                  Assistente de produção, montagem equipamentos e cenário, câmera, edição (básica) e finalização.
+                </p>
+                <div className="live-artists">
+                  <p>
+                    <span>Artista:</span> Zélia Duncan
+                  </p>
+                  <p>
+                    <span>Artista:</span> Badi Assad
+                  </p>
                 </div>
-              ))}
+              </div>
+              <div className="live-mosaic">
+                {liveShow.map((item, i) =>
+                  item.src ? (
+                    <div className="live-photo" key={i} onClick={() => setLightbox(item.src)}>
+                      <img src={item.src} alt={item.cap} loading="lazy" />
+                    </div>
+                  ) : (
+                    <div className="live-photo pending" key={i}>
+                      <span>Foto pendente</span>
+                    </div>
+                  ),
+                )}
+              </div>
             </div>
           </div>
         </section>

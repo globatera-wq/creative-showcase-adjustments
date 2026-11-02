@@ -11,3 +11,7 @@
 - [x] Nome "Gabriela Machado" em caixa alta baixa, como na referência aprovada.
 - [ ] Embeder o vídeo vertical (video-gusmao.mp4) e tirar a nota "arquivo separado" quando o arquivo for enviado.
 - [ ] Trocar o quadro tracejado pela foto "mão com partitura" quando a foto for enviada.
+
+## Live & Show — novo formato (2026-11-02)
+- [x] Reconstruir a seção seguindo a referência: texto à esquerda (Show Gravado/Lives, descrição da função, Artista: Zélia Duncan / Badi Assad) e mosaico 2x4 com 8 quadros à direita.
+- [ ] Trocar os 8 quadros tracejados "Foto pendente" pelas fotos reais quando a cliente enviar.
