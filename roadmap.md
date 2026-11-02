@@ -15,4 +15,4 @@
 ## Live & Show — novo formato (2026-11-02)
 - [x] Reconstruir a seção seguindo a referência: texto à esquerda (Show Gravado/Lives, descrição da função, Artista: Zélia Duncan / Badi Assad) e mosaico 2x4 com 8 quadros à direita.
 - [ ] Trocar os 8 quadros tracejados "Foto pendente" pelas fotos reais quando a cliente enviar.
-- [ ] Fotos recebidas: 2/8 — `Live_Show_Badi_5.png` → `src/assets/live-show-badi-05.png.asset.json`; `Live_Show_Badi_4.png` → `src/assets/live-show-badi-04.png.asset.json`. Aguardar todas as demais antes de montar o mosaico de uma só vez, na ordem da referência.
+- [ ] Fotos recebidas: 3/8 — `Live_Show_Badi_5.png` → `src/assets/live-show-badi-05.png.asset.json`; `Live_Show_Badi_4.png` → `src/assets/live-show-badi-04.png.asset.json`; `Live_Show_Badi_3.png` → `src/assets/live-show-badi-03.png.asset.json`. Aguardar todas as demais antes de montar o mosaico de uma só vez, na ordem da referência.
