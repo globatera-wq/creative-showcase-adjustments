@@ -28,6 +28,14 @@ import paulo02 from "@/assets/paulo02.jpg.asset.json";
 import paulo03 from "@/assets/paulo03.jpg.asset.json";
 import pauloVertical from "@/assets/paulo-vertical.jpg.asset.json";
 import vid0 from "@/assets/vid0.mp4.asset.json";
+import liveBadi01 from "@/assets/live-show-badi-01.png.asset.json";
+import liveBadi02 from "@/assets/live-show-badi-02.png.asset.json";
+import liveBadi03 from "@/assets/live-show-badi-03.png.asset.json";
+import liveBadi04 from "@/assets/live-show-badi-04.png.asset.json";
+import liveBadi05 from "@/assets/live-show-badi-05.png.asset.json";
+import liveEstudio01 from "@/assets/live-show-estudio-01.jpg.asset.json";
+import liveEstudio02 from "@/assets/live-show-estudio-02.jpg.asset.json";
+import liveEstudio03 from "@/assets/live-show-estudio-03.jpg.asset.json";
 import vid1 from "@/assets/vid1.mp4.asset.json";
 import vid2 from "@/assets/vid2.mp4.asset.json";
 import vid3 from "@/assets/vid3.mp4.asset.json";
@@ -125,11 +133,17 @@ const editList = [
   },
 ];
 
-// Live & Show — 8 quadros do mosaico; fotos reais serão enviadas pela cliente
-const liveShow: { src: string | null; cap: string }[] = Array.from({ length: 8 }, (_, i) => ({
-  src: null,
-  cap: `Live & Show — foto ${i + 1}`,
-}));
+// Live & Show — mosaico com as 8 fotos
+const liveShow: { src: string | null; cap: string }[] = [
+  { src: liveBadi01.url, cap: "Badi Assad ao vivo, plano médio" },
+  { src: liveEstudio01.url, cap: "Gravação em estúdio com os músicos" },
+  { src: liveBadi02.url, cap: "Badi Assad em close ao microfone" },
+  { src: liveEstudio02.url, cap: "Monitor da câmera durante a gravação" },
+  { src: liveBadi03.url, cap: "Badi Assad com a banda, plano aberto" },
+  { src: liveEstudio03.url, cap: "Cantora ao violão" },
+  { src: liveBadi04.url, cap: "Badi Assad com o baixista" },
+  { src: liveBadi05.url, cap: "Badi Assad no palco" },
+];
 
 const pauloPerfil = { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" };
 const pauloPartitura = { src: paulo02.url, cap: "Paulo Gusmão ao violão, com partitura à frente" };
