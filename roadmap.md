@@ -15,7 +15,7 @@
 ## Live & Show — novo formato (2026-11-02)
 - [x] Reconstruir a seção seguindo a referência: texto à esquerda (Show Gravado/Lives, descrição da função, Artista: Zélia Duncan / Badi Assad) e mosaico 2x4 com 8 quadros à direita.
 - [x] Mosaico montado com as 8 fotos.
-- [ ] Fotos únicas recebidas: 5/8 — `live-show-badi-01` (close sorrindo), `live-show-badi-02` (close perfil), `live-show-badi-03` (plano aberto com banda), `live-show-badi-04` (médio com baixista), `live-show-badi-05`. Duplicadas descartadas: `Live_Show_Badi_3-2.png` (= Badi_3) e `Live_Show_Badi_2_1.png` (= Badi_2) — avisar a cliente. Aguardar as demais antes de montar o mosaico de uma só vez, na ordem da referência.
+- [x] Mosaico final com as 8 fotos na ordem da referência (estúdio em cima, Badi Assad embaixo).
 
 ## Edição — colagem (2026-11-04)
 - [x] Colagem de 5 fotos em 3 colunas (2 · 1 central · 2) com legendas, conforme referência; quadros "Foto pendente".
