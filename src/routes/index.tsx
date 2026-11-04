@@ -554,49 +554,21 @@ function Index() {
                 Montagem e finalização — do material bruto ao corte final, com identidade visual e ritmo narrativo.
               </p>
             </div>
-            <div className="edit-list reveal">
-              {editList.map((e) => (
-                <div className="edit-row" key={e.key}>
-                  <div
-                    className={`edit-video${playing === e.key ? " playing" : ""}`}
-                    onClick={() => setPlaying(playing === e.key ? null : e.key)}
-                  >
-                    <img src={e.poster} alt={e.title} loading="lazy" />
-                    <video
-                      src={playing === e.key ? e.video : undefined}
-                      muted
-                      loop
-                      playsInline
-                      preload="none"
-                      autoPlay={playing === e.key}
-                    />
-                    <div className="play-badge">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="edit-info">
-                    <h3 className="edit-title">{e.title}</h3>
-                    <p className="edit-desc">{e.desc}</p>
-                    <dl className="edit-meta">
-                      <div>
-                        <dt>Direção</dt>
-                        <dd>Gabi Oliveira</dd>
-                      </div>
-                      <div>
-                        <dt>Editor</dt>
-                        <dd>Gabi Oliveira</dd>
-                      </div>
-                      <div>
-                        <dt>Data</dt>
-                        <dd>2026</dd>
-                      </div>
-                    </dl>
-                  </div>
-                </div>
+            <div className="ed-collage reveal">
+              {[
+                ["ed-a", "Legenda"],
+                ["ed-b", "Legenda"],
+                ["ed-c", "Legenda"],
+                ["ed-d", "Legenda"],
+                ["ed-e", "Legenda"],
+              ].map(([cls, cap]) => (
+                <figure className={`ed-item ${cls}`} key={cls}>
+                  <div className="ed-frame">Foto pendente</div>
+                  <figcaption>{cap}</figcaption>
+                </figure>
               ))}
             </div>
+          </div>
           </div>
         </section>
 
