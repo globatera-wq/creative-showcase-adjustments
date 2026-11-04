@@ -569,7 +569,6 @@ function Index() {
               ))}
             </div>
           </div>
-          </div>
         </section>
 
         {/* LIVE & SHOW */}
