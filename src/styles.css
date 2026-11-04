@@ -1169,12 +1169,17 @@
   @media (max-width: 900px) {
     .live-layout {
       flex-direction: column;
+      align-items: stretch;
       gap: 28px;
     }
     .live-copy {
       flex: none;
       width: 100%;
     }
+    .live-mosaic {
+      width: 100%;
+    }
+
     .live-copy > p {
       max-width: none;
       margin-bottom: 24px;
