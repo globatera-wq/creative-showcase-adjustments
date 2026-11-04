@@ -1018,7 +1018,7 @@
     flex: 1;
     max-width: 920px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
     min-width: 0;
   }
@@ -1029,6 +1029,15 @@
     background: #141414;
     cursor: zoom-in;
   }
+  /* 4 primeiras em duas colunas (2 fileiras), as 4 últimas lado a lado na fileira final */
+  .live-photo:nth-child(-n + 4) {
+    grid-column: span 2;
+  }
+  .live-photo:nth-child(n + 5) {
+    grid-column: span 1;
+    aspect-ratio: 1.25;
+  }
+
   .live-photo img {
     position: absolute;
     inset: 0;
@@ -1175,7 +1184,13 @@
     .live-mosaic {
       grid-template-columns: 1fr;
     }
+    .live-photo:nth-child(-n + 4),
+    .live-photo:nth-child(n + 5) {
+      grid-column: auto;
+      aspect-ratio: 1.8;
+    }
   }
+
 
   @media (max-width: 900px) {
     .edit-row,
