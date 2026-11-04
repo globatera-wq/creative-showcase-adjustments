@@ -135,14 +135,14 @@ const editList = [
 
 // Live & Show — mosaico com as 8 fotos
 const liveShow: { src: string | null; cap: string }[] = [
-  { src: liveBadi01.url, cap: "Badi Assad ao vivo, plano médio" },
   { src: liveEstudio01.url, cap: "Gravação em estúdio com os músicos" },
-  { src: liveBadi02.url, cap: "Badi Assad em close ao microfone" },
+  { src: liveEstudio03.url, cap: "Câmera captando a cantora ao violão" },
   { src: liveEstudio02.url, cap: "Monitor da câmera durante a gravação" },
-  { src: liveBadi03.url, cap: "Badi Assad com a banda, plano aberto" },
-  { src: liveEstudio03.url, cap: "Cantora ao violão" },
-  { src: liveBadi04.url, cap: "Badi Assad com o baixista" },
   { src: liveBadi05.url, cap: "Badi Assad no palco" },
+  { src: liveBadi02.url, cap: "Badi Assad em close ao microfone" },
+  { src: liveBadi01.url, cap: "Badi Assad ao vivo, plano médio" },
+  { src: liveBadi04.url, cap: "Badi Assad com o baixista" },
+  { src: liveBadi03.url, cap: "Badi Assad com a banda, plano aberto" },
 ];
 
 const pauloPerfil = { src: paulo01.url, cap: "Paulo Gusmão ao violão e teclado, de perfil" };
@@ -588,7 +588,9 @@ function Index() {
               <div className="live-copy">
                 <h3>Show Gravado/Lives</h3>
                 <p>
-                  Assistente de produção, montagem equipamentos e cenário, câmera, edição (básica) e finalização.
+                  Assistente de produção, montagem equipamentos e cenário, câmera,
+                  <br />
+                  edição(básica) e finalização.
                 </p>
                 <div className="live-artists">
                   <p>
