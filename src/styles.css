@@ -986,7 +986,7 @@
     margin-top: 40px;
   }
   .live-copy {
-    flex: 0 0 32%;
+    flex: 0 0 36%;
     min-width: 0;
     padding-top: 8px;
   }
@@ -996,6 +996,8 @@
     font-weight: 500;
     color: var(--cream);
     margin: 0 0 14px;
+    text-transform: none;
+    letter-spacing: 0;
   }
   .live-copy > p {
     font-size: 15px;
@@ -1014,14 +1016,15 @@
   }
   .live-mosaic {
     flex: 1;
+    max-width: 920px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    gap: 0;
     min-width: 0;
   }
   .live-photo {
     position: relative;
-    aspect-ratio: 1.45;
+    aspect-ratio: 1.8;
     overflow: hidden;
     background: #141414;
     cursor: zoom-in;
