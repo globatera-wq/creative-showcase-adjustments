@@ -16,6 +16,8 @@
 - [x] Reconstruir a seção seguindo a referência: texto à esquerda (Show Gravado/Lives, descrição da função, Artista: Zélia Duncan / Badi Assad) e mosaico 2x4 com 8 quadros à direita.
 - [x] Mosaico montado com as 8 fotos.
 - [x] Mosaico final com as 8 fotos na ordem da referência (estúdio em cima, Badi Assad embaixo).
+- [x] Última fileira com as 4 fotos lado a lado (grade de 4 colunas: 2 + 2 + 4). No celular, as 8 fotos voltam a ficar uma abaixo da outra e o mosaico recuperou a largura cheia (estava em 0 px por `align-items: flex-start` no layout em coluna).
+
 
 ## Edição — colagem (2026-11-04)
 - [x] Colagem de 5 fotos em 3 colunas (2 · 1 central · 2) com legendas, conforme referência; quadros "Foto pendente".
