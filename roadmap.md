@@ -21,4 +21,5 @@
 
 ## Edição — colagem (2026-11-04)
 - [x] Colagem de 5 fotos em 3 colunas (2 · 1 central · 2) com legendas, conforme referência; quadros "Foto pendente".
-- [ ] Colocar as 5 fotos e legendas reais quando enviadas.
+- [x] 5 fotos colocadas (legendas reais pendentes).
+- [x] Vídeo do Live & Show: não subir (decisão da cliente).
