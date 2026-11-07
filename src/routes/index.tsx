@@ -561,11 +561,11 @@ function Index() {
             </div>
             <div className="ed-collage reveal">
               {[
-                ["ed-a", "Legenda", ed01.url],
-                ["ed-b", "Legenda", ed02.url],
-                ["ed-c", "Legenda", ed03.url],
-                ["ed-d", "Legenda", ed05.url],
-                ["ed-e", "Legenda", ed04.url],
+                ["ed-a", "Legenda", ed02.url],
+                ["ed-b", "Legenda", ed03.url],
+                ["ed-c", "Legenda", ed01.url],
+                ["ed-d", "Legenda", ed04.url],
+                ["ed-e", "Legenda", ed05.url],
               ].map(([cls, cap, src]) => (
                 <figure className={`ed-item ${cls}`} key={cls}>
                   <div className="ed-frame">
