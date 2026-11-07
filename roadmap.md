@@ -22,4 +22,5 @@
 ## Edição — colagem (2026-11-04)
 - [x] Colagem de 5 fotos em 3 colunas (2 · 1 central · 2) com legendas, conforme referência; quadros "Foto pendente".
 - [x] 5 fotos colocadas (legendas reais pendentes).
+- [x] Ordem das fotos ajustada ao modelo: esq. cima = editora nos monitores, esq. baixo = rodas de cor, centro = editora na mesa, dir. cima = telas de correção de cor, dir. baixo = editora (foto escura). Borda tracejada dos quadros removida.
 - [x] Vídeo do Live & Show: não subir (decisão da cliente).
