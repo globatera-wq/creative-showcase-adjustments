@@ -1,6 +1,6 @@
 ## Edição — novas fotos (2026-11-19)
 - [ ] Aguardar todas as imagens e o ok da cliente antes de alterar a página; então replicar a distribuição 2 + 1 + 2 sem repetir fotos.
-- [x] Primeira foto recebida e guardada como `edicao-nova-01.jpg.asset.json`; não é duplicata exata das cinco imagens atuais. Página Edição mantida inalterada.
+- [x] Duas fotos novas recebidas e guardadas como `edicao-nova-01.jpg.asset.json` e `edicao-nova-02.jpg.asset.json`; não há duplicata exata entre elas nem com as cinco imagens atuais. Página Edição mantida inalterada.
 
 ## Projetos — layout do projeto em destaque (2026-09-01)
 - [x] Refazer o bloco de projeto seguindo a referência: coluna de texto à esquerda (Projeto: Disco Autoral / Artista: Gabriela Machado, parágrafos + bullets), grid 2x3 com 6 imagens à direita e faixa inferior com 4 fotos.
