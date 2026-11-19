@@ -2,6 +2,7 @@
 - [ ] Aguardar todas as fotos e a confirmação da cliente antes de alterar a página; seguir o modelo de referência e não duplicar imagens.
 - [x] Primeira foto (`Zelia_Duncan1.png`) guardada como `live-show-zelia-01.png.asset.json`; não é duplicata dos envios anteriores. Página Live & Show mantida inalterada.
 - [x] Segunda foto (`Zelia_Duncan5.png`) guardada como `live-show-zelia-05.png.asset.json`; arquivo inédito, sem cópias exatas entre os envios. Página Live & Show mantida inalterada.
+- [x] Terceira foto (`Zelia_Duncan4.png`) guardada como `live-show-zelia-04.png.asset.json`; arquivo inédito, sem cópias exatas entre os envios. Página Live & Show mantida inalterada.
 
 ## Edição — novas fotos (2026-11-19)
 - [x] Página atualizada após o ok da cliente: distribuição 2 + 1 + 2 mantida, com as quatro fotos novas e a `ft8` atual, sem repetições; desktop e mobile conferidos.
