@@ -1,6 +1,6 @@
 ## Edição — novas fotos (2026-11-19)
 - [ ] Aguardar todas as imagens e o ok da cliente antes de alterar a página; então replicar a distribuição 2 + 1 + 2 sem repetir fotos.
-- [x] Três fotos realmente novas recebidas: `ft1`, `ft7` e `ft6`, guardadas como `edicao-nova-01.jpg.asset.json`, `edicao-nova-02.jpg.asset.json` e `edicao-nova-03.jpg.asset.json`. A `ft9`, a `ft3` e os dois envios da `ft8` eram cópias exatas de arquivos anteriores e foram descartados. Página Edição mantida inalterada.
+- [x] Quatro fotos realmente novas recebidas: `ft1`, `ft7`, `ft6` e `ft4`, guardadas como `edicao-nova-01.jpg.asset.json` a `edicao-nova-04.jpg.asset.json`. A `ft9`, a `ft3` e os dois envios da `ft8` eram cópias exatas de arquivos anteriores e foram descartados. Página Edição mantida inalterada.
 
 ## Projetos — layout do projeto em destaque (2026-09-01)
 - [x] Refazer o bloco de projeto seguindo a referência: coluna de texto à esquerda (Projeto: Disco Autoral / Artista: Gabriela Machado, parágrafos + bullets), grid 2x3 com 6 imagens à direita e faixa inferior com 4 fotos.
