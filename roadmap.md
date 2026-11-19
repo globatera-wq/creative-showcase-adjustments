@@ -1,5 +1,5 @@
 ## Edição — novas fotos (2026-11-19)
-- [ ] Aguardar todas as imagens e o ok da cliente antes de alterar a página; então replicar a distribuição 2 + 1 + 2 sem repetir fotos.
+- [x] Página atualizada após o ok da cliente: distribuição 2 + 1 + 2 mantida, com as quatro fotos novas e a `ft8` atual, sem repetições; desktop e mobile conferidos.
 - [x] Quatro fotos realmente novas recebidas: `ft1`, `ft7`, `ft6` e `ft4`, guardadas como `edicao-nova-01.jpg.asset.json` a `edicao-nova-04.jpg.asset.json`. A `ft9`, a `ft3` e os dois envios da `ft8` eram cópias exatas de arquivos anteriores e foram descartados. Página Edição mantida inalterada.
 
 ## Projetos — layout do projeto em destaque (2026-09-01)

@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
-import ed01 from "@/assets/edicao-01.jpg.asset.json";
-import ed02 from "@/assets/edicao-02.jpg.asset.json";
-import ed03 from "@/assets/edicao-03.jpg.asset.json";
 import ed04 from "@/assets/edicao-04.jpg.asset.json";
-import ed05 from "@/assets/edicao-05.jpg.asset.json";
+import edNova01 from "@/assets/edicao-nova-01.jpg.asset.json";
+import edNova02 from "@/assets/edicao-nova-02.jpg.asset.json";
+import edNova03 from "@/assets/edicao-nova-03.jpg.asset.json";
+import edNova04 from "@/assets/edicao-nova-04.jpg.asset.json";
 import img00 from "@/assets/img00.jpg.asset.json";
 import img01 from "@/assets/img01.jpg.asset.json";
 import img02 from "@/assets/img02.jpg.asset.json";
@@ -561,11 +561,11 @@ function Index() {
             </div>
             <div className="ed-collage reveal">
               {[
-                ["ed-a", "Legenda", ed02.url],
-                ["ed-b", "Legenda", ed03.url],
-                ["ed-c", "Legenda", ed01.url],
+                ["ed-a", "Legenda", edNova01.url],
+                ["ed-b", "Legenda", edNova04.url],
+                ["ed-c", "Legenda", edNova02.url],
                 ["ed-d", "Legenda", ed04.url],
-                ["ed-e", "Legenda", ed05.url],
+                ["ed-e", "Legenda", edNova03.url],
               ].map(([cls, cap, src]) => (
                 <figure className={`ed-item ${cls}`} key={cls}>
                   <div className="ed-frame">
