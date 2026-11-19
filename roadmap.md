@@ -1,3 +1,7 @@
+## Live & Show — fotos Zélia Duncan (2026-11-19)
+- [ ] Aguardar todas as fotos e a confirmação da cliente antes de alterar a página; seguir o modelo de referência e não duplicar imagens.
+- [x] Primeira foto (`Zelia_Duncan1.png`) guardada como `live-show-zelia-01.png.asset.json`; não é duplicata dos envios anteriores. Página Live & Show mantida inalterada.
+
 ## Edição — novas fotos (2026-11-19)
 - [x] Página atualizada após o ok da cliente: distribuição 2 + 1 + 2 mantida, com as quatro fotos novas e a `ft8` atual, sem repetições; desktop e mobile conferidos.
 - [x] Quatro fotos realmente novas recebidas: `ft1`, `ft7`, `ft6` e `ft4`, guardadas como `edicao-nova-01.jpg.asset.json` a `edicao-nova-04.jpg.asset.json`. A `ft9`, a `ft3` e os dois envios da `ft8` eram cópias exatas de arquivos anteriores e foram descartados. Página Edição mantida inalterada.
