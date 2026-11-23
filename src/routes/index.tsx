@@ -41,6 +41,9 @@ import liveBadi05 from "@/assets/live-show-badi-05.png.asset.json";
 import liveEstudio01 from "@/assets/live-show-estudio-01.jpg.asset.json";
 import liveEstudio02 from "@/assets/live-show-estudio-02.jpg.asset.json";
 import liveEstudio03 from "@/assets/live-show-estudio-03.jpg.asset.json";
+import liveZelia01 from "@/assets/live-show-zelia-01.png.asset.json";
+import liveZelia04 from "@/assets/live-show-zelia-04.png.asset.json";
+import liveZelia05 from "@/assets/live-show-zelia-05.png.asset.json";
 import vid1 from "@/assets/vid1.mp4.asset.json";
 import vid2 from "@/assets/vid2.mp4.asset.json";
 import vid3 from "@/assets/vid3.mp4.asset.json";
@@ -141,12 +144,12 @@ const editList = [
 // Live & Show — mosaico com as 8 fotos
 const liveShow: { src: string | null; cap: string }[] = [
   { src: liveEstudio01.url, cap: "Gravação em estúdio com os músicos" },
-  { src: liveEstudio03.url, cap: "Câmera captando a cantora ao violão" },
-  { src: liveEstudio02.url, cap: "Monitor da câmera durante a gravação" },
-  { src: liveBadi05.url, cap: "Badi Assad no palco" },
+  { src: liveZelia04.url, cap: "Zélia Duncan ao microfone, no estúdio" },
+  { src: liveZelia01.url, cap: "Zélia Duncan em close ao microfone" },
+  { src: liveZelia05.url, cap: "Zélia Duncan interpretando no estúdio" },
   { src: liveBadi02.url, cap: "Badi Assad em close ao microfone" },
   { src: liveBadi01.url, cap: "Badi Assad ao vivo, plano médio" },
-  { src: liveBadi04.url, cap: "Badi Assad com o baixista" },
+  { src: liveBadi05.url, cap: "Badi Assad ao vivo, plano lateral" },
   { src: liveBadi03.url, cap: "Badi Assad com a banda, plano aberto" },
 ];
 
